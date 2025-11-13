@@ -50,6 +50,17 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def display_header():
+    print("=== LIBRARY BOOK LOAN SYSTEM ===")
+    print("Manchester Central Library")
+
+def display_menu():
+    print("1. Record new loans")
+    print("2. View all loans")
+    print("3. Exit")
+
+display_header()
+display_menu()
 
 
 
@@ -86,7 +97,14 @@ print("-------------------------------------------\n"
 #
 # Note: Only the DRIVER should be typing!
 # Write your code below:
+def display_loan(Title, Author, Borrower):
+    print ("---Loan Record---")
+    print(f"Title: {Title}")
+    print(f"Author: {Author}")
+    print(f"Borrower: {Borrower}")
+    print("----------------------")
 
+display_loan("1984", "George Orwell", " Sarah Smith")
 
 
 
@@ -109,6 +127,7 @@ print("-------------------------------------------\n"
 # Create functions that return values instead of just printing.
 #
 # TODO:
+
 # 1. Create a function called 'get_book_title' that:
 #    - Asks the user "Enter book title: "
 #    - Returns the input
@@ -133,6 +152,26 @@ print("-------------------------------------------\n"
 # Note: Only the DRIVER should be typing!
 # Write your code below:
 
+def get_book_title():
+    book_title = input ("Enter book title: ")
+    return book_title
+def get_book_author():
+    book_author = input ("Enter book author: ")
+    return book_author
+def get_borrower_name():
+    book_borrower= input ("Enter borrower name:")
+    return book_borrower
+def create_loan_record(Title, Author, Borrower):
+    book_dictionary = {
+    "Title": Title, "Author": Author, "Borrower": Borrower
+    }
+    return book_dictionary
+book_title = get_book_title()
+book_author = get_book_author() 
+book_borrower = get_borrower_name()
+
+loan= create_loan_record(book_title,book_author,book_borrower)
+print(f"{loan}")
 
 
 
@@ -177,6 +216,16 @@ print("-------------------------------------------\n"
 # Note: Only the DRIVER should be typing!
 # Write your code below:
 
+loans_records = []
+
+def record_new_loan():
+    records = {
+    "get_book_author": get_book_author(),
+    "get_book_title": get_book_title(),
+    "get_borrower_name": get_borrower_name()
+    }
+    return (records)
+record_new_loan()   
 
 
 

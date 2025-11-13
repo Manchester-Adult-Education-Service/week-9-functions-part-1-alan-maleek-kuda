@@ -216,6 +216,16 @@ print("-------------------------------------------\n"
 # Note: Only the DRIVER should be typing!
 # Write your code below:
 
+loans_records = []
+
+def record_new_loan():
+    records = {
+    "get_book_author": get_book_author(),
+    "get_book_title": get_book_title(),
+    "get_borrower_name": get_borrower_name()
+    }
+    return (records)
+record_new_loan()   
 
 
 

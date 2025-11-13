@@ -127,6 +127,7 @@ print("-------------------------------------------\n"
 # Create functions that return values instead of just printing.
 #
 # TODO:
+
 # 1. Create a function called 'get_book_title' that:
 #    - Asks the user "Enter book title: "
 #    - Returns the input
@@ -151,6 +152,26 @@ print("-------------------------------------------\n"
 # Note: Only the DRIVER should be typing!
 # Write your code below:
 
+def get_book_title():
+    book_title = input ("Enter book title: ")
+    return book_title
+def get_book_author():
+    book_author = input ("Enter book author: ")
+    return book_author
+def get_borrower_name():
+    book_borrower= input ("Enter borrower name:")
+    return book_borrower
+def create_loan_record(Title, Author, Borrower):
+    book_dictionary = {
+    "Title": Title, "Author": Author, "Borrower": Borrower
+    }
+    return book_dictionary
+book_title = get_book_title()
+book_author = get_book_author() 
+book_borrower = get_borrower_name()
+
+loan= create_loan_record(book_title,book_author,book_borrower)
+print(f"{loan}")
 
 
 
